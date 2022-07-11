@@ -12,3 +12,37 @@ function getRecipes(ingredient) {
 
   console.log('hi');
 }
+
+//--------------------------------------
+// global variable 
+let searchBtn = document.getElementById('start-button');
+//-----
+
+searchBtn.addEventListener("click", function() {
+
+    // variable to hold concatenated search list 
+let ingrList;
+
+// iterate through array 
+for (let i = 0; i < ingrArray; i++){
+   ingrList += ingrArray[i] + ",+";
+}
+
+  // if they enter a blank text field, it will do nothing
+  if (ingredient === "") {
+    return;
+  } else {
+    getRecipes(ingredient)
+  } 
+ // Pushes the text into the array
+//  for whatever reason if i need an array as a solution to push the value into
+//  searchArray.push(ingredient);
+
+//    clears the input text field 
+  citySearch.value = "";
+ 
+ 
+  // invoking all these functions 
+  // if i need to call it here or keep if conditional statement 
+  // getRecipes();
+});
