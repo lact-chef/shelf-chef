@@ -1,16 +1,14 @@
-function getRecipes(ingredient) {
+function getRecipes(ingredients) {
   //   event.preventDefault();
-  const apiKey = '588a41dee0c440b0a634e47c06f82f6f';
+    const apiKey = '588a41dee0c440b0a634e47c06f82f6f';
 
-  var api = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=${ingredient}`;
+    var api = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=${ingredients}`;
 
-  fetch(api)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
+    fetch(api)
+        .then((response) => response.json())
+        .then((data) => {
+        console.log(data);
     });
-
-  console.log('hi');
 }
 
 // notes for feature
@@ -23,19 +21,24 @@ function getRecipes(ingredient) {
 // changes page with new filter path?
 // empty array on return
 
-// global array to hold ingredients 
-let ingrArray = [];
+let addToList = document.getElementById('add-button');
 
 // event listener to push the ingredient into the empty array 
-list.addEventListener("click", (ingredient) => {
+addToList.addEventListener("click", () => {
 
+  
+  let ingredient = document.getElementById('addIngr').value;
 // if they enter a blank text field, it will do nothing
 if (ingredient === "") {
   return;
 } else {
   ingrArray.push(ingredient);
+  console.log(ingrArray);
+  addIngr.value = "";
 }
+
 })
+
 
 // create a remove button 
 // takes from global ingrArray and removes selected item from index
@@ -60,5 +63,5 @@ for (let i = 0; i < ingrArray; i++){
 getRecipes(ingrList);
 
 //    clears the input text field 
-  citySearch.value = "";
+    addIngr.value = "";
 });
