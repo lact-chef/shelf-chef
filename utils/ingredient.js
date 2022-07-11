@@ -52,10 +52,10 @@ let searchBtn = document.getElementById('start-button');
 searchBtn.addEventListener("click", function() {
 
     // variable to hold concatenated search list 
-let ingrList;
+let ingrList = "";
 
 // iterate through array 
-for (let i = 0; i < ingrArray; i++){
+for (let i = 0; i < ingrArray.length; i++){
    ingrList += ingrArray[i] + ",+";
 }
 
