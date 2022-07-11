@@ -21,13 +21,18 @@ function getRecipes(ingredients) {
 // changes page with new filter path?
 // empty array on return
 
+// global array to hold ingredients 
+let ingrArray = [];
+
+// global variables 
+let ingrBoard = document.getElementById('ingrBoard');
 let addToList = document.getElementById('add-button');
 
 // event listener to push the ingredient into the empty array 
 addToList.addEventListener("click", () => {
 
   
-  let ingredient = document.getElementById('addIngr').value;
+  let ingredient = document.getElementById('addIngr').value.trim();
 // if they enter a blank text field, it will do nothing
 if (ingredient === "") {
   return;
@@ -37,6 +42,22 @@ if (ingredient === "") {
   addIngr.value = "";
 }
 
+// clears field to prevent appending old and new lists
+ingrBoard.innerHTML = "";
+  
+  // this for loop will dynamically create li's 
+  for (let i = 0; i < ingrArray.length; i++) {
+    let list = ingrArray[i];
+
+    // creates a li 
+    let li = document.createElement("li");
+    
+    // set ingredient names to the list items 
+    li.textContent = list;
+
+    // appends the following elements to each other 
+    ingrBoard.appendChild(li);
+  }
 })
 
 
