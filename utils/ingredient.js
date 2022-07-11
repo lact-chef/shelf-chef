@@ -13,6 +13,41 @@ function getRecipes(ingredient) {
   console.log('hi');
 }
 
+// notes for feature
+// have a clear button to remove unnecessary recipes searched
+// also clears api search--could refresh whole page? 
+//have the initial page be the search bar only
+//after submission new 'path' for recipes and search bar on same screen
+// item history and recipes attached to new path
+// filter button with vegan and gluten free
+// changes page with new filter path?
+// empty array on return
+
+
+// create an add to search button to individually add ingredients
+// once user is done adding ingredients, they hit search
+// have all items pushed into an array
+// create for loop to iterate through array
+// create new variable to hold user input concatenated properly 
+// invoke getRecipes with proper search
+
+let ingrArray = [];
+
+list.addEventListener("click", (ingredient) => {
+//push each added ingredient into empty array
+// if they enter a blank text field, it will do nothing
+if (ingredient === "") {
+  return;
+} else {
+  ingrArray.push(ingredient);
+}
+// how to move new list made into the search button
+})
+
+// create a remove button 
+// takes from global ingrArray and removes selected item from index
+// figure out how to use the same new list to call search
+
 //--------------------------------------
 // global variable 
 let searchBtn = document.getElementById('start-button');
