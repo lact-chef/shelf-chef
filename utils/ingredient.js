@@ -23,25 +23,18 @@ function getRecipes(ingredient) {
 // changes page with new filter path?
 // empty array on return
 
-
-// create an add to search button to individually add ingredients
-// once user is done adding ingredients, they hit search
-// have all items pushed into an array
-// create for loop to iterate through array
-// create new variable to hold user input concatenated properly 
-// invoke getRecipes with proper search
-
+// global array to hold ingredients 
 let ingrArray = [];
 
+// event listener to push the ingredient into the empty array 
 list.addEventListener("click", (ingredient) => {
-//push each added ingredient into empty array
+
 // if they enter a blank text field, it will do nothing
 if (ingredient === "") {
   return;
 } else {
   ingrArray.push(ingredient);
 }
-// how to move new list made into the search button
 })
 
 // create a remove button 
@@ -63,21 +56,9 @@ for (let i = 0; i < ingrArray; i++){
    ingrList += ingrArray[i] + ",+";
 }
 
-  // if they enter a blank text field, it will do nothing
-  if (ingredient === "") {
-    return;
-  } else {
-    getRecipes(ingredient)
-  } 
- // Pushes the text into the array
-//  for whatever reason if i need an array as a solution to push the value into
-//  searchArray.push(ingredient);
+// invokes function with user input in proper syntax for api 
+getRecipes(ingrList);
 
 //    clears the input text field 
   citySearch.value = "";
- 
- 
-  // invoking all these functions 
-  // if i need to call it here or keep if conditional statement 
-  // getRecipes();
 });
