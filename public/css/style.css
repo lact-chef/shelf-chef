@@ -22,3 +22,22 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
+.recipe-dash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #333;
+  color: #fff;
+  min-height: 100vh;
+  width: 400px;
+  padding: 20px;
+  line-height: 1.5;
+  /*this is what hides the display off screen(transform)*/
+  transform: translateX(-500px);
+  transition: transform 1s ease-in-out;
+}
+
+.recipe.show {
+  transform: translateX(0);
+}
