@@ -24,9 +24,11 @@ function getRecipes(ingredients) {
 // global array to hold ingredients 
 let ingrArray = [];
 
-// global variables 
+// global variables ======================================
 let ingrBoard = document.getElementById('ingrBoard');
 let addToList = document.getElementById('add-button');
+let searchBtn = document.getElementById('start-button');
+//========================================================
 
 // event listener to push the ingredient into the empty array 
 addToList.addEventListener("click", () => {
@@ -42,8 +44,12 @@ if (ingredient === "") {
   addIngr.value = "";
 }
 
-// clears field to prevent appending old and new lists
-ingrBoard.innerHTML = "";
+createLi();
+})
+
+function createLi(){
+
+    ingrBoard.innerHTML = "";
   
   // this for loop will dynamically create li's 
   for (let i = 0; i < ingrArray.length; i++) {
@@ -52,24 +58,24 @@ ingrBoard.innerHTML = "";
     // creates a li 
     let li = document.createElement("li");
     
-    // set ingredient names to the list items 
+    // creates attributes to append to the li 
+    li.setAttribute("data-index", i);
     li.textContent = list;
 
+    // creates buttons 
+    let button = document.createElement("button");
+
+    // set the text of the button to be equal to the setItem 
+    button.textContent = 'Delete';
+  
+
     // appends the following elements to each other 
+    li.appendChild(button);
     ingrBoard.appendChild(li);
-  }
-})
+    }
+}
 
-
-// create a remove button 
-// takes from global ingrArray and removes selected item from index
-// figure out how to use the same new list to call search
-
-//--------------------------------------
-// global variable 
-let searchBtn = document.getElementById('start-button');
-//-----
-
+// search button feature to invoke api function
 searchBtn.addEventListener("click", function() {
 
     // variable to hold concatenated search list 
@@ -87,13 +93,15 @@ getRecipes(ingrList);
     addIngr.value = "";
 });
 
-// delete button 
-ingrBoard.addEventListener("click", function(event) {
+// delete button feature
+ingrBoard.addEventListener("click", (event) => {
     let element = event.target;
     
     if (element.matches("button") === true) {
       let index = element.parentElement.getAttribute("data-index");
       ingrArray.splice(index, 1);
   
+    //   reinvoke function to create list again 
+      createLi();
     }
   });
