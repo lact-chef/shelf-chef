@@ -51,15 +51,13 @@ function getInfo(event) {
 
     let element = event.target;
     let imgIndex = element.parentElement.getAttribute("data-index");
-console.log(imgIndex);
+
   // this for loop will dynamically create li's 
   for (let i = 0; i < idArray.length; i++) {
     
     let id = idArray[i];
-    console.log(id);
 
     if (imgIndex == id) {
-        console.log('hi');
 
         let api = `https://api.spoonacular.com/recipes/${imgIndex}/information?apiKey=${apiKey}`;
         
@@ -67,6 +65,31 @@ console.log(imgIndex);
         .then((response) => response.json())
         .then( (data) => {
                 console.log(data);
+         
+            let {sourceUrl} = data;
+            let {summary} = data;
+
+            let createSummary = document.createElement("p");
+            createSummary.textContent = summary;
+
+            let createUrl = document.createElement("p");
+            createUrl.textContent = sourceUrl;
+
+            let closeRecipe = document.createElement("button");
+            closeRecipe.setAttribute("id", "closeRecipe");
+            closeRecipe.textContent = 'Close';
+
+            let recipeCard = document.createElement("div");
+            recipeCard.appendChild(createSummary);
+            recipeCard.appendChild(createUrl);
+            recipeDash.append(closeRecipe);
+            recipeDash.append(recipeCard);
+
+        //   not sure what to set the loop to 
+          for (let i = 0; i < 10; i++) {
+            
+            // in case we want to extract more information 
+          }
             
         })
         
