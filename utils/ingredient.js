@@ -105,3 +105,11 @@ ingrBoard.addEventListener("click", (event) => {
       createLi();
     }
   });
+
+  // no html assigned to this yet 
+// clears array and list 
+  clearBtn.addEventListener("click", () => {
+
+    ingrArray = [];
+    ingrBoard.innerHTML = "";
+  })
