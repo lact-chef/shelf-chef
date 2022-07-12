@@ -1,15 +1,3 @@
-function getRecipes(ingredients) {
-  //   event.preventDefault();
-    const apiKey = '588a41dee0c440b0a634e47c06f82f6f';
-
-    var api = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=${ingredients}`;
-
-    fetch(api)
-        .then((response) => response.json())
-        .then((data) => {
-        console.log(data);
-    });
-}
 
 // notes for feature
 // have a clear button to remove unnecessary recipes searched
@@ -28,6 +16,7 @@ let ingrArray = [];
 let ingrBoard = document.getElementById('ingrBoard');
 let addToList = document.getElementById('add-button');
 let searchBtn = document.getElementById('start-button');
+let clearBtn = document.getElementById('clear-button');
 //========================================================
 
 // event listener to push the ingredient into the empty array 
