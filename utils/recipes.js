@@ -5,7 +5,7 @@ function getRecipes(ingredients) {
       let api = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=${ingredients}`;
   
       fetch(api)
-      
+
           .then((response) => response.json())
           .then((data) => {
           console.log(data);
@@ -27,4 +27,20 @@ function getRecipes(ingredients) {
              imageBoard.appendChild(createDiv);
           }
       });
+
+      getInfo(id)
   }
+
+function getInfo(id) {
+
+    let api = `https://api.spoonacular.com/recipes/${id}/information`;
+            
+        fetch(api)
+            .then((response) => response.json())
+            .then((data) => {
+                for (let i = 0; i < data.length; i++){
+                    
+                }
+            })
+    
+    }
