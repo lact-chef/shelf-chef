@@ -86,3 +86,14 @@ getRecipes(ingrList);
 //    clears the input text field 
     addIngr.value = "";
 });
+
+// delete button 
+ingrBoard.addEventListener("click", function(event) {
+    let element = event.target;
+    
+    if (element.matches("button") === true) {
+      let index = element.parentElement.getAttribute("data-index");
+      ingrArray.splice(index, 1);
+  
+    }
+  });
