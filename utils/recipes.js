@@ -20,19 +20,28 @@ function getRecipes(ingredients) {
             let { title } = data[i];
 
             let createDiv = document.createElement("div");
-            createDiv.setAttribute("data-index", id);
-            
-            let createImg = document.createElement("img");
-             createImg.setAttribute("src", image);
-             
+        // this is the recipe id 
+        createDiv.setAttribute("data-index", id);
+        
+        //use on click locally but make it async before pushing
+        let createBtn = document.createElement("button");
+        createBtn.setAttribute("onclick", "favorite(event)");
+        createBtn.setAttribute("class", "favorite-button")
+        createBtn.textContent = "Save"
+        
+        //use on click locally but make it async before pushing
+        let createImg = document.createElement("img");
+        createImg.setAttribute("onclick", "getInfo(event)");
+        createImg.setAttribute("src", image);
 
-             let createP = document.createElement("p");
-             createP.textContent = title;
+        let createP = document.createElement("p");
+        createP.textContent = title;
 
-             createDiv.appendChild(createP);
-             createDiv.appendChild(createImg);
-             recipeBoard.appendChild(createDiv);
-             idArray.push(id)
+        createDiv.appendChild(createP);
+        createDiv.appendChild(createBtn);
+        createDiv.appendChild(createImg);
+        recipeBoard.appendChild(createDiv);
+        idArray.push(id);
           }
           
         });
@@ -43,9 +52,9 @@ function getRecipes(ingredients) {
 
 let idArray = [];
 
-recipeBoard.addEventListener("click", (event) => {
-    getInfo(event);
-})
+// recipeBoard.addEventListener("click", (event) => {
+//     getInfo(event);
+// })
 
 function getInfo(event) {
   let element = event.target;
@@ -65,7 +74,7 @@ function getInfo(event) {
         .then((data) => {
           console.log(data);
           let {spoonacularSourceUrl} = data;
-          // let {step} = data.analyzedInstructions[0].steps[i];
+          
 
           let createAnchor = document.createElement("a");
           createAnchor.setAttribute("href", spoonacularSourceUrl);
