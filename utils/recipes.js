@@ -48,51 +48,54 @@ recipeBoard.addEventListener("click", (event) => {
 })
 
 function getInfo(event) {
-
-    let element = event.target;
-    let imgIndex = element.parentElement.getAttribute("data-index");
-
-  // this for loop will dynamically create li's 
+  let element = event.target;
+  let imgIndex = element.parentElement.getAttribute("data-index");
+  console.log(imgIndex);
+  // this for loop will dynamically create li's
   for (let i = 0; i < idArray.length; i++) {
-    
     let id = idArray[i];
+    console.log(id);
 
     if (imgIndex == id) {
 
-        let api = `https://api.spoonacular.com/recipes/${imgIndex}/information?apiKey=${apiKey}`;
-        
-    fetch(api)
+      let api = `https://api.spoonacular.com/recipes/${imgIndex}/information?apiKey=${apiKey}`;
+
+      fetch(api)
         .then((response) => response.json())
-        .then( (data) => {
-                console.log(data);
-         
-            let {sourceUrl} = data;
-            let {summary} = data;
+        .then((data) => {
+          console.log(data);
+          let {spoonacularSourceUrl} = data;
+          // let {step} = data.analyzedInstructions[0].steps[i];
 
-            let createSummary = document.createElement("p");
-            createSummary.textContent = summary;
+          let createAnchor = document.createElement("a");
+          createAnchor.setAttribute("href", spoonacularSourceUrl);
 
-            let createUrl = document.createElement("p");
-            createUrl.textContent = sourceUrl;
+          let createUrl = document.createElement("p");
+          createUrl.innerHTML = spoonacularSourceUrl;
 
-            let closeRecipe = document.createElement("button");
-            closeRecipe.setAttribute("id", "closeRecipe");
-            closeRecipe.textContent = 'Close';
-
-            let recipeCard = document.createElement("div");
-            recipeCard.appendChild(createSummary);
-            recipeCard.appendChild(createUrl);
-            recipeDash.append(closeRecipe);
-            recipeDash.append(recipeCard);
-
-        //   not sure what to set the loop to 
-          for (let i = 0; i < 10; i++) {
-            
-            // in case we want to extract more information 
-          }
-            
-        })
+          let closeRecipe = document.createElement("button");
+          closeRecipe.setAttribute("id", "closeRecipe");
+          closeRecipe.textContent = 'Close';
+          let createOL = document.createElement("ol");
         
+          // loop to iterate through the steps 
+          for (let i = 0; i < data.analyzedInstructions[0].steps.length; i++) {
+           
+             let createLi = document.createElement("li");
+             createLi.textContent = data.analyzedInstructions[0].steps[i].step;
+           
+             createOL.appendChild(createLi)
+
+          }
+
+          let recipeCard = document.createElement("div");
+          createAnchor.append(createUrl);
+          recipeCard.appendChild(createOL);
+          recipeCard.appendChild(createAnchor);
+          recipeDash.append(closeRecipe);
+          recipeDash.appendChild(recipeCard);
+          
+        });
     }
   }
 }
