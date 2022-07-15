@@ -1,12 +1,16 @@
 {{#each favorites as |favorite| }}
-<div class="flex font-sans favorite" data-index={{favorite.id}}>
-    <div class = "flex-none w-48 relative">
-        <img src="{{favorite.img}}" class="absolute inset-0 w-full h-full object-cover"/>
-    </div>
+<div class="flex font-sans favorite" data-id={{favorite.id}} data-index={{favorite.recipeID}}>
+
   <div class="flex flex-wrap">
     <h2 class="flex-auto text-lg font-bold text-slate-900">
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      <a href="/favorites/{{favorite.title}}">{{favorite.title}}</a>
+      {{favorite.title}}
     </h2>
+  </div>
+
+  <div class = "flex-none w-48 relative">
+        <img src="{{favorite.img}}" class="absolute inset-0 w-full h-full object-cover" onclick="getinfo(event)"/>
+  </div>
+  
 </div>
 {{/each}} 
