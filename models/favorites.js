@@ -11,11 +11,19 @@ Project.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    userName: {
+      type: DataTypes.varchar(25),
+      allowNull: false,
+    },
+    recipeID: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     tile: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    URL: {
+    imageURL: {
       type: DataTypes.varchar(255),
     },
     date_created: {
