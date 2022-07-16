@@ -30,7 +30,7 @@ Project.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'userData',
+        model: 'User',
         key: 'id',
       },
     },
