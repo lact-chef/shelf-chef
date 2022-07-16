@@ -29,10 +29,11 @@ const favorite = async (event) => {
 
             //location replacement may not be needed for this request
         if (response.ok) {
+          console.log('response works');
 
             //use this instead of replace to prevent double saving
             // element.remove()
-        document.location.replace('/favorite');
+        // document.location.replace('/favorite');
         } else {
         alert('Failed to create favorite');
         }

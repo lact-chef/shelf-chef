@@ -73,7 +73,7 @@ router.post('/logout', (req, res) => {
 
 // stores favorite
 // functionality goes into the api folder in userRoutes
-router.post('/favorite', async (req, res) => {
+router.post('/recipe', async (req, res) => {
   try {
     const storeFavorite = req.body;
 
