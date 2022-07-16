@@ -19,7 +19,7 @@ const favorite = async (event) => {
     let img = element.parentElement.lastElementChild.currentSrc;
 
           // figure out correct path name later to controller
-      const response = await fetch(`/api/favorite`, {
+      const response = await fetch(`/api/users/favorite`, {
         method: 'POST',
         body: JSON.stringify({ recipe, title, img }),
         headers: {
