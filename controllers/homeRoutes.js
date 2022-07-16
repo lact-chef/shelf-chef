@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { Project, User, Favorites } = require('../models');
-const User = require('../models/User');
 const withAuth = require('../utils/auth');
 
 // ============Homepage=================

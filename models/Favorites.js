@@ -12,7 +12,7 @@ Favorites.init(
       autoIncrement: true,
     },
     userName: {
-      type: DataTypes.varchar(25),
+      type: DataTypes.STRING,
       allowNull: false,
     },
     recipeID: {
@@ -24,7 +24,7 @@ Favorites.init(
       allowNull: false,
     },
     imageURL: {
-      type: DataTypes.varchar(255),
+      type: DataTypes.STRING,
     },
     date_created: {
       type: DataTypes.DATE,

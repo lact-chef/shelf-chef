@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
-const { User } = require('../../models/userData');
+const { User } = require('../../models/User');
 
 //Creates a new user, hashes password, and saves to DB
 router.post('/', async (req, res) => {
