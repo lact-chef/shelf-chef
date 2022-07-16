@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Project, User, Favorite } = require('../models');
+const { Project, User, Favorites } = require('../models');
 const User = require('../models/User');
 const withAuth = require('../utils/auth');
 
@@ -88,12 +88,36 @@ router.get('/login', (req, res) => {
 });
 // =======================================
 
+// double check 
+// ==========Favorite Page===============
+router.get('/favorite', async (req, res) => {
+  try {
+    const favoriteData = await Favorites.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    const favorite = favoriteData.get({ plain: true });
+
+    res.render('favorite', {
+      ...favorite,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+// =======================================
 
 //===== Favorite Id =================
 //double check this
 router.get('/favorite/:id', async (req, res) => {
   try {
-    const fvrteId = await Favorite.findByPk(req.params.recipeID,{
+    const fvrteId = await Favorites.findByPk(req.params.recipeID,{
       where: {
         recipeID: req.params.recipeID,
       },
