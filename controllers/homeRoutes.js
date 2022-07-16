@@ -1,8 +1,9 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { Project, User, Favorite } = require('../models');
 const User = require('../models/User');
 const withAuth = require('../utils/auth');
 
+// ============Homepage=================
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
@@ -27,7 +28,9 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+// =======================================
 
+// ==========Project Id Page===============
 router.get('/project/:id', async (req, res) => {
   try {
     const projectData = await Project.findByPk(req.params.id, {
@@ -49,7 +52,9 @@ router.get('/project/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+// =======================================
 
+// ===========Profile Page=============
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
@@ -69,7 +74,9 @@ router.get('/profile', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+// =======================================
 
+// ====== Login page ==================
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
@@ -79,5 +86,33 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+// =======================================
+
+
+//===== Favorite Id =================
+//double check this
+router.get('/favorite/:id', async (req, res) => {
+  try {
+    const fvrteId = await Favorite.findByPk(req.params.recipeID,{
+      where: {
+        recipeID: req.params.recipeID,
+      },
+    });
+
+    if (!fvrteId) {
+      res.status(404).json({ message: 'No favorite recipe found with this id!' });
+      return;
+    }
+
+    const favoriteId = fvrteId.get({ plain: true });
+
+    res.render('favoriteId', {
+      ...favoriteId
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+// =======================================
 
 module.exports = router;
