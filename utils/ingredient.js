@@ -29,7 +29,7 @@ if (ingredient === "") {
   return;
 } else {
   ingrArray.push(ingredient);
-  console.log(ingrArray);
+  // console.log(ingrArray);
   addIngr.value = "";
 }
 

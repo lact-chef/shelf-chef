@@ -1,4 +1,5 @@
 let recipeBoard = document.getElementById('recipe-container');
+let recipeDash = document.getElementById("recipe-dash");
 
 const apiKey = '588a41dee0c440b0a634e47c06f82f6f';
 
