@@ -22,6 +22,13 @@ const addToList = async () => {
     ingredientName.value = "";
   }
 
+  createLi();
+}
+//=======================================
+
+//=============Create Ingredient==============
+const createLi = async () => {
+
   ingrBoard.innerHTML = "";
   
   // this for loop will dynamically create li's 
@@ -46,52 +53,6 @@ const addToList = async () => {
     li.appendChild(button);
     ingrBoard.appendChild(li);
     }
-}
-
-// addToList.addEventListener("click", () => {
-
-  
-//   let ingredient = document.getElementById('addIngr').value.trim();
-// // if they enter a blank text field, it will do nothing
-// if (ingredient === "") {
-//   return;
-// } else {
-//   ingrArray.push(ingredient);
-//   // console.log(ingrArray);
-//   addIngr.value = "";
-// }
-
-// createLi();
-// })
-//=======================================
-
-//=============Create Ingredient==============
-function createLi(){
-
-  //   ingrBoard.innerHTML = "";
-  
-  // // this for loop will dynamically create li's 
-  // for (let i = 0; i < ingrArray.length; i++) {
-  //   let list = ingrArray[i];
-
-  //   // creates a li 
-  //   let li = document.createElement("li");
-    
-  //   // creates attributes to append to the li 
-  //   li.setAttribute("data-index", i);
-  //   li.textContent = list;
-
-  //   // creates buttons 
-  //   let button = document.createElement("button");
-
-  //   // set the text of the button to be equal to the setItem 
-  //   button.textContent = 'Delete';
-  
-
-  //   // appends the following elements to each other 
-  //   li.appendChild(button);
-  //   ingrBoard.appendChild(li);
-  //   }
 }
 //=======================================
 
@@ -143,17 +104,6 @@ const deleteIngr = async (event) => {
       createLi();
     }
 }
-// ingrBoard.addEventListener("click", (event) => {
-//     let element = event.target;
-    
-//     if (element.matches("button") === true) {
-//       let index = element.parentElement.getAttribute("data-index");
-//       ingrArray.splice(index, 1);
-  
-//     //   reinvoke function to create list again 
-//       createLi();
-//     }
-//   });
 //=======================================
 
 
@@ -164,11 +114,7 @@ const clearBtn = async () => {
   ingrArray = [];
   ingrBoard.innerHTML = "";
 }
-// clearBtn.addEventListener("click", () => {
-//   ingrArray = [];
-//   ingrBoard.innerHTML = "";
-
-//   })
+//=======================================
 
 // button add ingredient
 document
