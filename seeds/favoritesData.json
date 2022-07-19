@@ -1,0 +1,75 @@
+[
+  {
+    "name": "alberto123",
+    "recipeID": "1697833",
+    "title": "Chocolate Orange Cake",
+    "image_url": "https://webknox.com/recipeImages/1697833-556x370.jpg",
+    "user_id": "1",
+    "date_created": "07-17-2022"
+  },
+  {
+    "name": "alberto123",
+    "recipeID": "1697831",
+    "title": "Chicken Spinach Mozzarella",
+    "image_url": "https://webknox.com/recipeImages/1697831-556x370.jpg",
+    "user_id": "1",
+    "date_created": "07-17-2022"
+  },
+  {
+    "name": "alberto123",
+    "recipeID": "1697823",
+    "title": "Bacon-Apple-Pecan Stuffed French Toast",
+    "image_url": "https://webknox.com/recipeImages/1697823-556x370.jpg",
+    "user_id": "1",
+    "date_created": "07-17-2022"
+  },
+  {
+    "name": "unlcleluka123",
+    "recipeID": "1697795",
+    "title": "Moms Best Chocolate Chip Cookies",
+    "image_url": "https://webknox.com/recipeImages/1697795-556x370.jpg",
+    "user_id": "2",
+    "date_created": "07-17-2022"
+  },
+  {
+    "name": "unlcleluka123",
+    "recipeID": "1697821",
+    "title": "Mushroom Jerky",
+    "image_url": "https://webknox.com/recipeImages/1697821-556x370.jpg",
+    "user_id": "2",
+    "date_created": "07-17-2022"
+  },
+  {
+    "name": "unlcleluka123",
+    "recipeID": "735820",
+    "title": "Asian-Style Country Ribs with Black Bean Garlic Sauce",
+    "image_url": "https://webknox.com/recipeImages/735820-556x370.jpg", 
+    "user_id": "2",
+    "date_created": "07-17-2022"
+  },
+  {
+    "name": "timothymu123",
+    "recipeID": "1697787",
+    "title": "Seafood Newburg (Scallops, Shrimp, and Cod in a Sherry Cream Sauce)",
+    "image_url": "https://webknox.com/recipeImages/1697787-556x370.jpg",
+    "user_id": "3",
+    "date_created": "07-17-2022"
+  },
+  {
+    "name": "timothymu123",
+    "recipeID": "649012",
+    "title": "Kolaches",
+    "image_url": "https://webknox.com/recipeImages/649012-556x370.jpg", 
+    "user_id": "3",
+    "date_created": "07-17-2022"
+  },
+  {
+    "name": "timothymu123",
+    "recipeID": "652797",
+    "title": "Mustard Pretzels",
+    "image_url": "https://webknox.com/recipeImages/652797-556x370.jpg",
+    "user_id": "3",
+    "date_created": "07-17-2022"
+  }
+]
+
