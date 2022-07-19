@@ -38,6 +38,6 @@ header, .project:not(:last-child) {
   transition: transform 1s ease-in-out;
 }
 
-.recipe.show {
+.recipe-dash.show {
   transform: translateX(0);
 }
