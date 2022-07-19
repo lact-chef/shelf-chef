@@ -71,24 +71,8 @@ for (let i = 0; i < ingrArray.length; i++){
 getRecipes(ingrList);
 
 //    clears the input text field 
-    addIngr.value = "";
+ingredientName.value = "";
 }
-// searchBtn.addEventListener("click", function() {
-
-//     // variable to hold concatenated search list 
-// let ingrList = "";
-
-// // iterate through array 
-// for (let i = 0; i < ingrArray.length; i++){
-//    ingrList += ingrArray[i] + ",+";
-// }
-
-// // invokes function with user input in proper syntax for api 
-// getRecipes(ingrList);
-
-// //    clears the input text field 
-//     addIngr.value = "";
-// });
 //=======================================
 
 //=========Delete Ingredient Button==============
