@@ -12,17 +12,10 @@ const getFavIdInfo = async (event) => {
           .then((response) => response.json())
           .then((data) => {
             console.log(data);
-            let {spoonacularSourceUrl} = data;
             let {summary} = data;
   
             let createSummary = document.createElement("p");
             createSummary.innerHTML = summary;
-  
-            let createAnchor = document.createElement("a");
-            createAnchor.setAttribute("href", spoonacularSourceUrl);
-  
-            let createUrl = document.createElement("p");
-            createUrl.innerHTML = spoonacularSourceUrl;
 
             // to hold ingredients
             let createUl = document.createElement("ul");
@@ -51,10 +44,10 @@ const getFavIdInfo = async (event) => {
             let recipeInfo = document.getElementById("recipe-info");
 
             let recipeCard = document.createElement("div");
-            createAnchor.append(createUrl);
+            
             recipeCard.appendChild(createSummary);
+            recipeCard.appendChild(createUl);
             recipeCard.appendChild(createOL);
-            recipeCard.appendChild(createAnchor);
             recipeInfo.appendChild(recipeCard);
             
           }); 

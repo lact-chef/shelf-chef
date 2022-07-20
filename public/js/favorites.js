@@ -1,8 +1,3 @@
-// to be added to public 
-// this function will take the recipe id and post it in server 
-// it will generate a unique id with the recipe id in table
-// it will then be 
-// watch button placement as a child element
 const favorite = async (event) => {
     event.preventDefault();
     let element = event.target;
@@ -47,6 +42,6 @@ const favorite = async (event) => {
 
   // favorite button 
 // invokes async function
-//document
-//.getElementById('favorite-button')
-//.addEventListener('click', favorite);
+document
+.getElementById('favorite-button')
+.addEventListener('click', favorite);

@@ -19,13 +19,12 @@
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/" class="text-gray-800 hover:text-red-600 font-bold">Home</a>
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        <a href="/favorite" class="text-gray-800 hover:text-red-600">Favorites</a>
-        <a href="/recipe" class="text-gray-800 hover:text-red-600">Recipes</a>
+        <a href="/" class="text-gray-800 hover:text-red-600 font-bold">Home</a> |
+        <button class="no-button" id="logout">Logout</button> |
+        <a href="/favorite" class="text-gray-800 hover:text-red-600">Favorites</a> |
+        <a href="/recipe" class="text-gray-800 hover:text-red-600">Recipes</a> 
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login">login</a> |
         <a href="/" class="text-gray-800 hover:text-red-600 font-bold">Home</a>
         {{/if}}
       </nav>
