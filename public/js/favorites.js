@@ -16,7 +16,7 @@ const favorite = async (event) => {
     let currentUser = document.querySelector("#user-id")
    
     let user_id = currentUser.dataset.id;
-
+      console.log(recipeID, title, image_url, user_id);
           // figure out correct path name later to controller
       const response = await fetch(`/api/recipe`, {
         method: 'POST',
