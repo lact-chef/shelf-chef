@@ -1,13 +1,10 @@
+const apiKey = '588a41dee0c440b0a634e47c06f82f6f';
+
 const getFavIdInfo = async (event) => {
     let element = event.target;
   
     let imgIndex = element.parentElement.getAttribute("data-index");
     // this for loop will dynamically create li's
-    for (let i = 0; i < idArray.length; i++) {
-      let id = idArray[i];
-      console.log(id);
-  
-      if (imgIndex == id) {
   
         let api = `https://api.spoonacular.com/recipes/${imgIndex}/information?apiKey=${apiKey}`;
   
@@ -52,7 +49,7 @@ const getFavIdInfo = async (event) => {
           }
   
             let recipeInfo = document.getElementById("recipe-info");
-            
+
             let recipeCard = document.createElement("div");
             createAnchor.append(createUrl);
             recipeCard.appendChild(createSummary);
@@ -60,9 +57,7 @@ const getFavIdInfo = async (event) => {
             recipeCard.appendChild(createAnchor);
             recipeInfo.appendChild(recipeCard);
             
-          });
-      }
-    }
+          }); 
   }
 
   document

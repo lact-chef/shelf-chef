@@ -1,10 +1,12 @@
 {{#each favorite as |favorites| }}
-<div class="flex font-sans favorite" data-id='{{favorites.user_id}}' data-index='{{favorites.recipeID}}'>
+<div class="flex font-sans favorite"  data-index='{{favorites.recipeID}}'>
 
-  <div class="flex flex-wrap">
-    <h2 class="flex-auto text-lg font-bold text-slate-900">
+  <div class="flex flex-wrap" >
+    
+    <h2 class="flex-auto text-lg font-bold text-slate-900" data-id='{{favorites.id}}'>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{favorites.title}} 
+      <button type="button" onclick="deleteId(event)">Delete Recipe</button>
     </h2>
   </div>
 
@@ -14,3 +16,5 @@
   
 </div>
 {{/each}} 
+
+<script src="/js/deleteId.js"></script>

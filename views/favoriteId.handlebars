@@ -1,9 +1,10 @@
-<div class="flex font-sans favorite" data-id={{favorite.id}} >
+<div class="flex font-sans favorite" >
 
-  <div class="flex flex-wrap">
-    <h2 class="flex-auto text-lg font-bold text-slate-900">
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+  <div class="flex flex-wrap"  >
+    <h2 class="flex-auto text-lg font-bold text-slate-900" data-id={{favorite.id}}>
       {{favorite.title}}
+      <button type="button" onclick="deleteId(event)">Delete Recipe</button>
+      
     </h2>
   </div>
 
@@ -17,3 +18,4 @@
 </div>
 
 <script src="/js/favoriteIdInfo.js" ></script>
+<script src="/js/deleteId.js"></script>

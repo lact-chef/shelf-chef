@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const { Favorites } = require('../../models');
+const withAuth = require('../../utils/auth');
 
   // double check the where clause
   // deletes favorite
-  router.delete('/:id', async (req, res) => {
+  router.delete('/:id', withAuth, async (req, res) => {
     try {
       const destroyFavorite = await Favorites.destroy({
         where: {
