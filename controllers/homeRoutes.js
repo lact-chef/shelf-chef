@@ -60,7 +60,6 @@ router.get('/recipe', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      // include: [{ model: Project }],
     });
 
     const user = userData.get({ plain: true });
@@ -98,11 +97,11 @@ router.get('/favorite', async (req, res) => {
       
     });
   
-    // console.log(favoriteData);
     const favorite = favoriteData.map((fav) => fav.get({plain:true}));
     console.log(favorite, "favorites");
     res.render('favorite', {
-      ...favorite,
+      favorite,
+      //to stay logged in
       logged_in: req.session.logged_in
     });
   } catch (err) {
