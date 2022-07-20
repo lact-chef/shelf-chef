@@ -122,9 +122,9 @@ router.get('/favorite/:id', async (req, res) => {
     }
 
     const favorite = favoriteData.get({ plain: true });
-
+    console.log(favorite);
     res.render('favoriteId', {
-      ...favorite,
+      favorite,
       logged_in: req.session.logged_in
     });
   } catch (err) {

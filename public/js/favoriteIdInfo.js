@@ -1,4 +1,4 @@
-function getFavIdInfo(event) {
+const getFavIdInfo = async (event) => {
     let element = event.target;
   
     let imgIndex = element.parentElement.getAttribute("data-index");
@@ -26,10 +26,6 @@ function getFavIdInfo(event) {
   
             let createUrl = document.createElement("p");
             createUrl.innerHTML = spoonacularSourceUrl;
-  
-            let closeRecipe = document.createElement("button");
-            closeRecipe.setAttribute("id", "closeRecipe");
-            closeRecipe.textContent = 'Close';
 
             // to hold ingredients
             let createUl = document.createElement("ul");
@@ -55,17 +51,20 @@ function getFavIdInfo(event) {
                createOL.appendChild(createLi);
           }
   
+            let recipeInfo = document.getElementById("recipe-info");
+            
             let recipeCard = document.createElement("div");
             createAnchor.append(createUrl);
             recipeCard.appendChild(createSummary);
             recipeCard.appendChild(createOL);
             recipeCard.appendChild(createAnchor);
-            recipeDash.append(closeRecipe);
-            recipeDash.appendChild(recipeCard);
+            recipeInfo.appendChild(recipeCard);
             
           });
       }
     }
-  
-    recipeDash.classList.toggle("show")
   }
+
+  document
+  .getElementById("show-more")
+  .addEventListener("click", getFavIdInfo);

@@ -1,4 +1,4 @@
-<div class="flex font-sans favorite" data-id={{favorite.id}} data-index={{favorite.recipeID}}>
+<div class="flex font-sans favorite" data-id={{favorite.id}} >
 
   <div class="flex flex-wrap">
     <h2 class="flex-auto text-lg font-bold text-slate-900">
@@ -8,9 +8,12 @@
   </div>
 
   <div class = "flex-none w-48 relative">
-        <img src="{{favorite.image_url}}" class="absolute inset-0 w-full h-full object-cover" onclick="getFavIdInfo(event)"/>
+        <img src="{{favorite.image_url}}" class="absolute inset-0 w-full h-full object-cover"/>
   </div>
-  <button type="button" id="show-more">Show More</button>
+  
+  <div id="recipe-info" data-index='{{favorite.recipeID}}'>
+    <button type="button" id="show-more">Show More</button>
+  </div>
 </div>
 
 <script src="./js/favoriteIdInfo.js"></script>
