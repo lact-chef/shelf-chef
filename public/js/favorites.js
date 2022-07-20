@@ -32,8 +32,7 @@ const favorite = async (event) => {
           console.log(user_id);
 
             //use this instead of replace to prevent double saving
-            // element.remove()
-        // document.location.replace('/favorite');
+            element.remove()
         } else {
         alert('Failed to create favorite');
         }

@@ -1,13 +1,6 @@
 // global array to hold ingredients 
 let ingrArray = [];
 
-// global variables ======================================
-
-
-
-
-//========================================================
-
 //=============Add Ingredient Button===============
 // event listener to push the ingredient into the empty array 
 const addToList = async () => {
@@ -91,8 +84,7 @@ const deleteIngr = async (event) => {
 //=======================================
 
 
-//===========Clear Button===============
-  // no html assigned to this yet 
+//===========Clear Button=============== 
 // clears array and list 
 const clearBtn = async () => {
   ingrArray = [];
