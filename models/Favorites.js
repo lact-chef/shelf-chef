@@ -12,11 +12,6 @@ Favorites.init(
     primaryKey: true,
     autoIncrement: true,
   },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      defaultValue: User.id, 
-    },
     recipeID: {
       type: DataTypes.INTEGER,
       allowNull: false,

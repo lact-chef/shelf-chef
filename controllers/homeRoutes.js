@@ -91,17 +91,16 @@ router.get('/login', (req, res) => {
 // ==========Favorite Page===============
 router.get('/favorite', async (req, res) => {
   try {
-    const favoriteData = await Favorites.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
+    const favoriteData = await Favorites.findAll({
+     where: {
+      user_id: req.session.user_id
+     }
+      
     });
-
-    const favorite = favoriteData.get({ plain: true });
-
+  
+    // console.log(favoriteData);
+    const favorite = favoriteData.map((fav) => fav.get({plain:true}));
+    console.log(favorite, "favorites");
     res.render('favorite', {
       ...favorite,
       logged_in: req.session.logged_in

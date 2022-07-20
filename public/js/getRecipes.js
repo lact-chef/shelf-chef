@@ -26,6 +26,7 @@ const getRecipes = async (ingredients) => {
         // this is the recipe id 
         createDiv.setAttribute("data-index", id);
         
+        
         //use on click locally but make it async before pushing
         let createBtn = document.createElement("button");
         createBtn.setAttribute("onclick", "favorite(event)");

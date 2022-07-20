@@ -41,3 +41,8 @@ header, .project:not(:last-child) {
 .recipe-dash.show {
   transform: translateX(0);
 }
+
+
+.hide-fav-button {
+  display: none;
+}

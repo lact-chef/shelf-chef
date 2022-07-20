@@ -10,18 +10,22 @@ const favorite = async (event) => {
     if (element.matches("button") === true) {
 
     // specifies the targets recipe id
-    let recipe = element.parentElement.getAttribute("data-index");
+    let recipeID = element.parentElement.getAttribute("data-index");
       
      // specifies the targets recipe title
     let title = element.parentElement.firstElementChild.innerHTML;
 
     // specifies the targets recipe img
-    let img = element.parentElement.lastElementChild.currentSrc;
+    let image_url = element.parentElement.lastElementChild.currentSrc;
+
+    let currentUser = document.querySelector("#user-id")
+   
+    let user_id = currentUser.dataset.id;
 
           // figure out correct path name later to controller
-      const response = await fetch(`/api/favorite/recipe`, {
+      const response = await fetch(`/api/recipe`, {
         method: 'POST',
-        body: JSON.stringify({ recipe, title, img }),
+        body: JSON.stringify({ recipeID, title, image_url, user_id }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -30,6 +34,7 @@ const favorite = async (event) => {
             //location replacement may not be needed for this request
         if (response.ok) {
           console.log('response works');
+          console.log(user_id);
 
             //use this instead of replace to prevent double saving
             // element.remove()
