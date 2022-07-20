@@ -47,6 +47,6 @@ const favorite = async (event) => {
 
   // favorite button 
 // invokes async function
-document
-.getElementById('favorite-button')
-.addEventListener('click', favorite);
+//document
+//.getElementById('favorite-button')
+//.addEventListener('click', favorite);
