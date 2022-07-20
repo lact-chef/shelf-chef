@@ -114,21 +114,18 @@ router.get('/favorite', async (req, res) => {
 //double check this
 router.get('/favorite/:id', async (req, res) => {
   try {
-    const fvrteId = await Favorites.findByPk(req.params.recipeID,{
-      where: {
-        recipeID: req.params.recipeID,
-      },
-    });
+    const favoriteData = await Favorites.findByPk(req.params.id);
 
-    if (!fvrteId) {
+    if (!favoriteData) {
       res.status(404).json({ message: 'No favorite recipe found with this id!' });
       return;
     }
 
-    const favoriteId = fvrteId.get({ plain: true });
+    const favorite = favoriteData.get({ plain: true });
 
     res.render('favoriteId', {
-      ...favoriteId
+      ...favorite,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
