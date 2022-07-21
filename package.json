@@ -1,7 +1,7 @@
 {
-  "name": "shelf-chef",
+  "name": "tailwind",
   "version": "1.0.0",
-  "description": "",
+  "description": "![badge](https://img.shields.io/badge/license-MIT-orange)",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -27,5 +27,13 @@
     "eslint-config-prettier": "^6.15.0",
     "prettier": "^2.1.2",
     "tailwindcss": "^3.1.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lact-chef/shelf-chef.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lact-chef/shelf-chef/issues"
+  },
+  "homepage": "https://github.com/lact-chef/shelf-chef#readme"
 }
