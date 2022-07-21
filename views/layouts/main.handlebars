@@ -10,13 +10,13 @@
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body class="bg-red-800">
+<body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
+    <header class="display-flex justify-space-between align-center p-2 bg-red-800">
       <h1>
         <a href="/">Shelf-Chef</a>
       </h1>
-      <nav>
+      <nav class="bg-red-800">
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/" class="text-gray-800 hover:text-red-600 font-bold">Home</a> |
