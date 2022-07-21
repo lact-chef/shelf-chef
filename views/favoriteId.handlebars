@@ -1,4 +1,4 @@
-{{!-- <div class="flex font-sans favorite" >
+<div class="flex font-sans favorite" >
 
   <div class="flex flex-wrap"  >
     <h2 class="flex-auto text-lg font-bold text-slate-900" data-id={{favorite.id}}>
@@ -15,24 +15,26 @@
   <div id="recipe-info" data-index='{{favorite.recipeID}}'>
     <button type="button" id="show-more">Show More</button>
   </div>
-</div> --}}
+</div>
 
-<div class="shadow">
+{{!-- <div class="shadow">
     <div class="bg-cover"
          style="background-image: url('{{favorite.image_url}}')">
         <div class="p-4 h-32 flex items-end text-white" data-id='{{favorite.id}}'>
-            <h3 class="mb-2">{{favorite.title}}</h3>
+            <h3 class="mb-2">{{favorite.title}} 
+              <button onclick="deleteId(event)" class="bg-red-600 hover:bg-red-light absolute pin-r mr-4 -mt-8 flex justify-center items-center rounded-full h-12 w-12 p-2">Delete</button>
+            </h3>
         </div>
-        <div class="relative">
-            <button class="bg-red-600 hover:bg-red-light absolute pin-r mr-4 -mt-8 flex justify-center items-center rounded-full h-12 w-12 p-2">Delete</button>
-        </div>
+        {{!-- <div class="relative">
+            
+        </div> --}}
     </div>
     <div id="recipe-info" data-index='{{favorite.recipeID}}' class="p-4 mt-4">
         
             <button type="button" id="show-more" class=" bg-gray-300 rounded font-medium border border-grey px-4 py-2 hover:bg-grey-lighter">Show More</button>
   
     </div>
-</div>
+</div> --}}
 
 <script src="/js/favoriteIdInfo.js" ></script>
 <script src="/js/deleteId.js"></script>
