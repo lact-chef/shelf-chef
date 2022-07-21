@@ -1,5 +1,5 @@
-<div id="user-id" data-id='{{id}}' class="w-50 h-auto shadow-md bg-red-800 px-10 m-4 absolute rounded">
-  <h3 class="m-4 text-center"> Add Ingredients</h3>
+<div id="user-id" data-id='{{id}}' class="w-50 h-auto shadow-md bg-red-800 px-10 m-4 rounded">
+  <h3 class="m-4 text-center text-lg p-4"> Add Ingredients</h3>
   <hr>
   
    <div class="flex m-5 rounded-full border-grey-light border bg-red-600">
@@ -11,13 +11,14 @@
 	<input id="ingredientName" class="w-full rounded mr-4" type="text" placeholder="Search Ingredient">
 </div>
 <div>
-        <button type="button" id="clear-button" class="ml-20 rounded-md bg-green-600 py-3 px-3 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-green-500">
+                <button type="button" id="start-button" class="flex items-center shadow bg-red-50 px-4 py-2 text-white hover:bg-red-900 m-3">
+          <span class="w-auto flex justify-end items-center text-grey p-2">Get Recipes</span></button>  
+        <button type="button" id="clear-button" class="flex items-center shadow bg-red-700 px-4 py-2 text-white hover:bg-red-900 m-3">
           <span class="w-auto flex justify-end items-center text-grey p-2">Clear List</span></button>
-        <button type="button" id="start-button" class="ml-20 rounded-md bg-red-600 py-3 px-3 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-red-500">
-          <span class="w-auto flex justify-end items-center text-grey p-2">Get Recipes</span></button>        
+      
         <button type="button" id="favorite-button" class="hide-fav-button">favorite</button>
 </div>
-<p class="items-center text-sm py-4 px-6 h-12 text-white text-ellipsis"> Current Ingredients:</p>
+<p class="items-center text-lg p-4 px-6 h-12 text-white "> Current Ingredients:</p>
   <ul id="ingrBoard" class="flex ingrBoard">
       
   </ul>
