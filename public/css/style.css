@@ -34,7 +34,7 @@ header, .project:not(:last-child) {
   padding: 20px;
   line-height: 1.5;
   /*this is what hides the display off screen(transform)*/
-  transform: translateX(-1500px);
+  transform: translateX(-500px);
   transition: transform 1s ease-in-out;
 }
 
