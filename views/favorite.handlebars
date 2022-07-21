@@ -1,6 +1,6 @@
 <div class="flex flex-wrap py-16 px-10"></div>
 {{#each favorite as |favorites| }}
-<div class="bg-red-500 m-7"  data-index='{{favorites.recipeID}}'>
+<div class="bg-red-500 m-7 justify-around"  data-index='{{favorites.recipeID}}'>
 
   <div class="flex flex-wrap" >
     
@@ -12,7 +12,7 @@
   </div>
 
   <div class = "flex-none w-48 relative">
-      <a href="/favorite/{{favorites.id}}"><img src="{{favorites.image_url}}" class="w-full m-3 border-b-4 border-black rounded"/></a>
+      <a href="/favorite/{{favorites.id}}"><img src="{{favorites.image_url}}" class="w-full m-3 p-3 rounded"/></a>
   </div>
   
 </div>

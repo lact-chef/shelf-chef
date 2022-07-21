@@ -33,12 +33,12 @@ const createLi = async () => {
     
     // creates attributes to append to the li 
     li.setAttribute("data-index", i);
-    li.setAttribute("class", "flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-white text-ellipsis whitespace-nowrap rounded");
+    li.setAttribute("class", "flex-auto text-lg font-bold m-3 p-4");
     li.textContent = list;
     
     // creates buttons 
     let button = document.createElement("button");
-    button.setAttribute("class", "rounded-md bg-red-600 py-3 px-3")
+    button.setAttribute("class", "rounded-md bg-red-600 p-3 m-3")
 
     // set the text of the button to be equal to the setItem 
     button.textContent = 'Delete';
