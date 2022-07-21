@@ -11,9 +11,9 @@
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
+  <div class="flex-column flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2 bg-red-800">
-      <h1>
+      <h1 class="text-black-900">
         <a href="/">Shelf-Chef</a>
       </h1>
       <nav class="bg-red-800">
@@ -29,7 +29,7 @@
         {{/if}}
       </nav>
     </header>
-    <main class="container container-fluid mt-5">
+    <main class="w-screen min-w-full container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
