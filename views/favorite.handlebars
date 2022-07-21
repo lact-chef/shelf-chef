@@ -1,4 +1,4 @@
-{{#each favorite as |favorites| }}
+{{!-- {{#each favorite as |favorites| }}
 <div class="flex font-sans favorite"  data-index='{{favorites.recipeID}}'>
 
   <div class="flex flex-wrap" >
@@ -15,6 +15,20 @@
   </div>
   
 </div>
-{{/each}} 
+{{/each}}  --}}
+<div class="flex flex-wrap">
+{{#each favorite as |favorites| }}
 
+<a href="/favorite/{{favorites.id}}">
+<div class="shadow bg-gray-700 py-3 px-3 m-4 rounded" data-index='{{favorites.recipeID}}'>
+      <img src="{{favorites.image_url}}" class="w-full h-auto"/>
+    <div class="p-4">
+        <h2 class="text-white leading-tight"> {{favorites.title}} 
+      <button type="button" class="ml-20 rounded-md bg-black  text-white" onclick="deleteId(event)">Delete Recipe</button>
+        </h2>
+    </div>
+</div></a>
+
+{{/each}} 
+</div>
 <script src="/js/deleteId.js"></script>
