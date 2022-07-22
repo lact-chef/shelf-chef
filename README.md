@@ -30,7 +30,7 @@ This application is covered by the MIT license.
 # Contributors 
 Alberto, Tim, Luka
 # Questions:
-Github Profile: [Github Profile](https://github.com/Guapguap)
+Github Profiles: [Alberto](https://github.com/Guapguap) , [Tim](https://github.com/timothymateo)
 <br>
-Email me at: londono.alberto110@gmail.com
+Email at: londono.alberto110@gmail.com , timoteo@u.northwestern.edu
 
