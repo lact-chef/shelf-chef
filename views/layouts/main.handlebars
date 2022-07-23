@@ -11,12 +11,12 @@
 </head>
 
 <body>
-  <div class="flex-column justify-around">
-    <header class="display-flex justify-space-between align-center p-2 bg-red-800">
-      <h1 class="text-black-900">
+  <div class="">
+    <header class="justify-space-between align-center p-2 bg-red-800">
+      <h1 class="flex text-lg font-bold font-medium mt-3 ml-3 text-white">
         <a href="/">Shelf-Chef</a>
       </h1>
-      <nav class="bg-red-800">
+      <nav class="flex justify-end m-1 p-1 bg-red-800">
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/" class="text-gray-800 hover:text-red-600 font-bold">Home</a> |
@@ -29,7 +29,7 @@
         {{/if}}
       </nav>
     </header>
-    <main class="justify-center container container-fluid mt-5">
+    <main class=" text-center items-center m-5">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
