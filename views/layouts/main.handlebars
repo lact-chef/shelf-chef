@@ -10,8 +10,7 @@
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body>
-  <div class="">
+<body class="bg-yellow-100">
     <header class="justify-space-between align-center p-2 bg-red-800">
       <h1 class="flex text-lg font-bold font-medium mt-3 ml-3 text-white">
         <a href="/">Shelf-Chef</a>
@@ -19,24 +18,24 @@
       <nav class="flex justify-end m-1 p-1 bg-red-800">
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/" class="text-gray-800 hover:text-red-600 font-bold">Home</a> |
-        <button class="no-button" id="logout">Logout</button> |
-        <a href="/favorite" class="text-gray-800 hover:text-red-600">Favorites</a> |
-        <a href="/recipe" class="text-gray-800 hover:text-red-600">Recipes</a> 
+        <a href="/" class="text-gray-800 hover:text-red-600 font-bold"> Home </a> |
+        <button class="no-button" id="logout"> Logout </button> |
+        <a href="/favorite" class="text-gray-800 hover:text-red-600"> Favorites </a> |
+        <a href="/recipe" class="text-gray-800 hover:text-red-600"> Recipes </a> 
         {{else}}
-        <a href="/login">login</a> |
-        <a href="/" class="text-gray-800 hover:text-red-600 font-bold">Home</a>
+        <a href="/login"> Login </a> |
+        <a href="/" class="text-gray-800 hover:text-red-600 font-bold"> Home </a>
         {{/if}}
       </nav>
     </header>
-    <main class=" text-center items-center m-5">
+    <main class="m-5">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
     <footer>
-      
+  
     </footer>
-  </div>
+
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}

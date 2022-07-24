@@ -1,31 +1,37 @@
-<div id="user-id" data-id='{{id}}' class="w-50 h-auto shadow-md bg-red-800 px-10 m-4 rounded">
-  <h3 class="m-4 text-center text-lg p-4"> Add Ingredients</h3>
+<div class="flex flex-wrap">
+  <div id="user-id" data-id='{{id}}' class="w-auto h-auto shadow-lg bg-red-800 px-10 m-4 rounded">
+  <h3 class="m-4 text-center text-lg text-white p-4"> Add Ingredients</h3>
   <hr>
-  
-   <div class="flex m-5 rounded-full border-grey-light border bg-red-600">
-	<button type="button" id="add-button">
-	  <span class="w-auto flex justify-end items-center text-grey rounded p-2">
+    <div class="flex m-5 ">
+    <input id="ingredientName" class=" rounded m-4" type = "text" placeholder= "    Search Ingredient">
+	<button type="button" id="add-button" class="flex items-center shadow bg-red-700 px-4 py-2 text-white hover:bg-red-900 m-3">
+	  <span class="text-grey rounded p-2">
 		Add
 	  </span>
 	</button>
-	<input id="ingredientName" class="w-full rounded mr-4" type="text" placeholder="Search Ingredient">
-</div>
-<div>
-                <button type="button" id="start-button" class="flex items-center shadow bg-red-50 px-4 py-2 text-white hover:bg-red-900 m-3">
+    </div>
+  </div>
+  <div class=" w-auto h-auto shadow-lg bg-red-800 px-10 m-4 rounded">
+    <div class=" m-5 ">
+                <button type="button" id="start-button" class="flex items-center shadow bg-green-900 px-4 py-2 text-white hover:bg-green-800 m-3">
           <span class="w-auto flex justify-end items-center text-grey p-2">Get Recipes</span></button>  
-        <button type="button" id="clear-button" class="flex items-center shadow bg-red-700 px-4 py-2 text-white hover:bg-red-900 m-3">
+        <button type="button" id="clear-button" class="flex items-center shadow bg-red-900 px-4 py-2 text-white hover:bg-red-800 m-3">
           <span class="w-auto flex justify-end items-center text-grey p-2">Clear List</span></button>
       
         <button type="button" id="favorite-button" class="hide-fav-button">favorite</button>
-</div>
-<p class="items-center text-lg p-4 px-6 h-12 text-white "> Current Ingredients:</p>
-  <ul id="ingrBoard" class="flex ingrBoard">
+    </div>
+    <div class="">
+  <p class="text-center text-lg p-4 px-6 h-12 text-white "> Current Ingredients:</p>
+  <hr>
+  <ul id="ingrBoard" class="flex flex-wrap ingrBoard">
       
   </ul>
-</div>
+    </div>
+  </div>
 
- <div id="recipe-container">
+  <div id="recipe-container" class="flex flex-wrap text-center m-7">
 
+  </div>
  </div>
 
 <div id="recipe-dash" class="recipe-dash">
