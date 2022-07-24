@@ -1,18 +1,19 @@
-<div class="flex flex-wrap py-16 px-10"></div>
+<div class="p-5 m-5"></div>
 {{#each favorite as |favorites| }}
-<div class="bg-red-500 m-7 justify-around"  data-index='{{favorites.recipeID}}'>
+<div class=" m-5 p-5  bg-red-500 "  data-index='{{favorites.recipeID}}'>
 
-  <div class="flex flex-wrap" >
+  <div class="flex flex-wrap m-7" >
     
     <h2 class="flex-auto text-lg font-bold m-3" data-id='{{favorites.id}}'>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{favorites.title}} 
-      <button class="flex items-center shadow bg-red-700 px-4 py-2 text-white hover:bg-red-900 m-3" type="button" onclick="deleteId(event)">Delete Recipe</button>
+      <button class="flex-auto items-center shadow bg-red-700 px-4 py-2 text-white hover:bg-red-900 m-3" type="button" onclick="deleteId(event)">Delete Recipe</button>
     </h2>
+    <a href="/favorite/{{favorites.id}}"><img src="{{favorites.image_url}}" class=" justify-items-center  m-3 p-3 rounded"/></a>
   </div>
 
-  <div class = "flex-none w-48 relative">
-      <a href="/favorite/{{favorites.id}}"><img src="{{favorites.image_url}}" class="w-full m-3 p-3 rounded"/></a>
+  <div class = "justify-items-center w-48 relative">
+      
   </div>
   
 </div>
