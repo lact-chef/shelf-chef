@@ -38,6 +38,8 @@ Email at: londono.alberto110@gmail.com , timoteo@u.northwestern.edu
 
 ![shelf-chef_homepageP2](https://user-images.githubusercontent.com/102185104/180703135-f42c9e43-6c9e-4434-b3f7-24b88c093215.png)
 ![shelf-chef_loginP2](https://user-images.githubusercontent.com/102185104/180703152-ab62cc98-92d3-4c25-8208-c1d895e12789.png)
-![shelf-chef_recipe](https://user-images.githubusercontent.com/102185104/180703163-6a4e0317-98a![shelf-chef_favorite](https://user-images.githubusercontent![shelf-chef_favoriteId](https://user-images.githubusercontent.com/102185104/180703194-e26685d4-bb67-4457-a83a-118a9ce1715d.png)
-.com/102185104/180703182-7ad6b80d-e860-42ce-8b4d-5f88014aa11d.png)
-7-4ebc-a3c0-7caef1970ebb.png)
+![shelf-chef_recipe](https://user-images.githubusercontent.com/102185104/180703163-6a4e0317-98a7-4ebc-a3c0-7caef1970ebb.png)
+![shelf-chef_favorite](https://user-images.githubusercontent.com/102185104/180703182-7ad6b80d-e860-42ce-8b4d-5f88014aa11d.png)
+![shelf-chef_favoriteId](https://user-images.githubusercontent.com/102185104/180703194-e26685d4-bb67-4457-a83a-118a9ce1715d.png)
+
+
