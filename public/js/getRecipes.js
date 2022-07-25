@@ -25,7 +25,7 @@ const getRecipes = async (ingredients) => {
             let createDiv = document.createElement("div");
         // this is the recipe id 
         createDiv.setAttribute("data-index", id);
-        createDiv.setAttribute("class", "bg-red-500 m-7");
+        createDiv.setAttribute("class", "bg-red-500 m-3");
         
         
         //use on click locally but make it async before pushing
