@@ -1,20 +1,18 @@
-<div class="flex flex-wrap items-center py-16 px-10 bg-red-500 m-7 justify-around" >
+<div class="flex flex-wrap items-center bg-red-500 m-7 justify-center" >
 
-  <div class="flex flex-wrap"  >
+  <div class="flex flex-wrap text-center"  >
 
     <h2 class="flex-auto text-lg font-bold m-3" data-id={{favorite.id}}>
       {{favorite.title}}
       <button class="flex items-center shadow bg-red-700 px-4 py-2 text-white hover:bg-red-900 m-3" type="button" onclick="deleteId(event)">Delete Recipe</button> 
     </h2>
+      <img src="{{favorite.image_url}}" class=" m-3 p-3 rounded"/>
   </div>
-
-  <div class = "flex-none w-48 ">
-        <img src="{{favorite.image_url}}" class="w-full m-3 p-3 rounded"/>
-  </div>
-  
-  <div id="recipe-info" data-index='{{favorite.recipeID}}'>
-    <button class="flex items-center shadow bg-red-700 px-4 py-2 text-white hover:bg-red-900 m-3" type="button" id="show-more">Show More</button>
-  </div>
+</div>
+<div class="flex flex-wrap  bg-red-500 m-7 justify-center text-center " >
+   <div id="recipe-info" data-index='{{favorite.recipeID}}' class=" content-center">
+      <button class=" items-center shadow bg-red-700 px-4 py-2 text-white hover:bg-red-900 m-3" type="button" id="show-more">Show More</button>
+    </div>
 </div>
 
 <script src="/js/favoriteIdInfo.js" ></script>
