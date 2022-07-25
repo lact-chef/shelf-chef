@@ -16,8 +16,7 @@ const favorite = async (event) => {
     let currentUser = document.querySelector("#user-id")
    
     let user_id = currentUser.dataset.id;
-      console.log(recipeID, title, image_url, user_id);
-          // figure out correct path name later to controller
+
       const response = await fetch(`/api/recipe`, {
         method: 'POST',
         body: JSON.stringify({ recipeID, title, image_url, user_id }),
@@ -26,12 +25,9 @@ const favorite = async (event) => {
         },
     });
 
-            //location replacement may not be needed for this request
         if (response.ok) {
-          console.log('response works');
-          console.log(user_id);
 
-            //use this instead of replace to prevent double saving
+            // to remove save button
             element.remove()
         } else {
         alert('Failed to create favorite');

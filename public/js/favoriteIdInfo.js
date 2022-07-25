@@ -4,14 +4,13 @@ const getFavIdInfo = async (event) => {
     let element = event.target;
   
     let imgIndex = element.parentElement.getAttribute("data-index");
-    // this for loop will dynamically create li's
   
         let api = `https://api.spoonacular.com/recipes/${imgIndex}/information?apiKey=${apiKey}`;
   
         fetch(api)
           .then((response) => response.json())
           .then((data) => {
-            console.log(data);
+
             let {summary} = data;
   
             let createSummary = document.createElement("p");

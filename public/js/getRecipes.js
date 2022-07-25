@@ -1,4 +1,3 @@
-
 let idArray = [];
 
 const apiKey = '588a41dee0c440b0a634e47c06f82f6f';
@@ -15,7 +14,6 @@ const getRecipes = async (ingredients) => {
       fetch(api)
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
 
           for (let i = 0; i < data.length; i++) {
             let { id } = data[i];
@@ -49,10 +47,7 @@ const getRecipes = async (ingredients) => {
         createDiv.appendChild(createImg);
         recipeBoard.appendChild(createDiv);
         idArray.push(id);
-          }
+        }
           
-        });
-    
- 
-      
+      });    
     }

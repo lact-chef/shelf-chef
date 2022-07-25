@@ -1,15 +1,14 @@
 let recipeDash = document.getElementById("recipe-dash");
 
-
 const getInfo = async (event) => {
 
     let element = event.target;
     let imgIndex = element.parentElement.getAttribute("data-index");
-    console.log(imgIndex);
+
     // this for loop will dynamically create li's
     for (let i = 0; i < idArray.length; i++) {
       let id = idArray[i];
-      console.log(id);
+
   
       if (imgIndex == id) {
   
@@ -18,7 +17,7 @@ const getInfo = async (event) => {
         fetch(api)
           .then((response) => response.json())
           .then((data) => {
-            console.log(data);
+
             let {spoonacularSourceUrl} = data;
             
   

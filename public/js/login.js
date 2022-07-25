@@ -1,3 +1,4 @@
+// login route post request to api endpoint
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -23,6 +24,7 @@ const loginFormHandler = async (event) => {
   }
 };
 
+// signup route post request to api endpoint
 const signupFormHandler = async (event) => {
   event.preventDefault();
 

@@ -11,7 +11,6 @@ const addToList = async () => {
     return;
   } else {
     ingrArray.push(ingredient);
-    console.log(ingrArray);
     ingredientName.value = "";
   }
 
@@ -109,6 +108,7 @@ document
 .getElementById('ingrBoard')
 .addEventListener("click", deleteIngr);
 
+//button to clear all ingredients
 document
 .getElementById('clear-button')
 .addEventListener("click", clearBtn);
